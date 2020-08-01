@@ -12,7 +12,7 @@ const EventDetailsTab = ({ event }) => {
         {event.title}
       </Card.Title>
       <Card.Subtitle className="text-muted">
-        {event.time && `${format(eventDate, 'MM/dd/yyyy - kk:mm:ss')}`}
+        {event.time && `${format(eventDate, 'dd/MM/yyyy - kk:mm:ss')}`}
       </Card.Subtitle>
       <Card.Text>
         Location:

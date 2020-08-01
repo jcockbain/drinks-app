@@ -19,7 +19,7 @@ const EventSummaryCard = ({ event }) => (
           </Link>
         </Card.Title>
         <Card.Subtitle className="text-muted">
-          {event.time && format(new Date(event.time), 'MM/dd/yyyy - kk:mm')}
+          {event.time && format(new Date(event.time), 'dd/MM/yyyy - kk:mm')}
         </Card.Subtitle>
         <Card.Text>
           {event.location && event.location.name}
