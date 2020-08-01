@@ -2,13 +2,15 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Row from 'react-bootstrap/Row';
 import Header from './components/Header';
-import EventSummaryContainer from './containers/EventSummaryContainer';
 import './App.scss';
 
+import EventSummaryContainer from './containers/EventSummaryContainer';
 import EventSummaryCard from './elements/EventSummaryCard';
+import EventSearch from './elements/EventSearch';
 
 function App() {
   const [data, setData] = useState([]);
+  const [searchString, setSearchString] = useState('');
 
   const boxes = data.map((event) => (
     <EventSummaryCard key={event.id} event={event} />
@@ -16,18 +18,23 @@ function App() {
 
   useEffect(() => {
     async function fetchData() {
+      const apiUrl = searchString
+        ? `https://mock-api.drinks.test.siliconrhino.io/events?search=${searchString}`
+        : 'https://mock-api.drinks.test.siliconrhino.io/events';
+
       const result = await axios(
-        'https://mock-api.drinks.test.siliconrhino.io/events',
+        apiUrl,
       );
       setData(result.data);
     }
     fetchData();
-  }, []);
+  }, [searchString]);
 
   return (
-    <div className="App m-auto">
+    <div className="App">
       <Header />
       <EventSummaryContainer>
+        <EventSearch submitSearch={setSearchString} />
         <Row>
           {boxes}
         </Row>
