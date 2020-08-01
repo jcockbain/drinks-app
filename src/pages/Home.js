@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Row from 'react-bootstrap/Row';
 
-import Header from './components/PageHeader';
-import EventSummaryContainer from './containers/EventSummaryContainer';
-import EventSummaryCard from './elements/EventSummaryCard';
-import EventSearch from './elements/EventSearch';
+import Header from '../components/PageHeader';
+import EventSummaryContainer from '../containers/EventSummaryContainer';
+import EventSummaryCard from '../elements/EventSummaryCard';
+import EventSearch from '../elements/EventSearch';
 
 function Home() {
   const [data, setData] = useState([]);

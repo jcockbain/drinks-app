@@ -6,8 +6,8 @@ import {
   Switch,
   Route,
 } from 'react-router-dom';
-import Home from './Home';
-import Events from './Events';
+import Home from './pages/Home';
+import Events from './pages/Events';
 
 function App() {
   return (

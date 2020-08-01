@@ -5,9 +5,9 @@ import {
   useParams,
 } from 'react-router-dom';
 
-import Header from './components/PageHeader';
-import EventSummaryContainer from './containers/EventSummaryContainer';
-import EventTabs from './containers/EventTabsContainer';
+import Header from '../components/PageHeader';
+import EventSummaryContainer from '../containers/EventSummaryContainer';
+import EventTabs from '../containers/EventTabsContainer';
 
 function Events() {
   const [eventData, setEventData] = useState({});
