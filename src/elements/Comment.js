@@ -18,7 +18,7 @@ const Comment = ({ eventComment }) => (
         {eventComment.message}
       </p>
       <p className="text-muted">
-        {format(new Date(eventComment.timestamp), 'MM/dd/yyyy-kk:mm:ss')}
+        {format(new Date(eventComment.timestamp), 'MM/dd/yyyy - kk:mm:ss')}
       </p>
     </Media.Body>
   </Media>

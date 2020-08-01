@@ -9,8 +9,8 @@ import {
 import drinksIcons from '../utils/drinksIcons';
 
 const EventSummaryCard = ({ event }) => (
-  <Col md={3}>
-    <Card className="m-3">
+  <Col md={4}>
+    <Card className="m-2">
       <Card.Img variant="top" src={`/drinks-icons/${drinksIcons[event.type]}`} alt="drinks-icon" />
       <Card.Body>
         <Card.Title>
@@ -19,7 +19,7 @@ const EventSummaryCard = ({ event }) => (
           </Link>
         </Card.Title>
         <Card.Subtitle className="text-muted">
-          {event.time && format(new Date(event.time), 'MM/dd/yyyy')}
+          {event.time && format(new Date(event.time), 'MM/dd/yyyy - kk:mm')}
         </Card.Subtitle>
         <Card.Text>
           {event.location && event.location.name}
