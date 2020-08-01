@@ -7,7 +7,7 @@ import {
 
 import Header from './components/Header';
 import EventSummaryContainer from './containers/EventSummaryContainer';
-import EventSummaryCard from './elements/EventSummaryCard';
+import EventCard from './elements/EventCard';
 
 function Events() {
   const [eventData, setEventData] = useState({});
@@ -30,7 +30,7 @@ function Events() {
     <div className="App">
       <Header />
       <EventSummaryContainer>
-        <EventSummaryCard event={eventData} />
+        <EventCard event={eventData} />
       </EventSummaryContainer>
     </div>
 

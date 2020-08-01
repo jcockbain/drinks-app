@@ -32,6 +32,8 @@ npm run test
 
 - React-Router for routing. [React-Router](https://reactrouter.com/)
 
+- Pigeon Maps for map components. [Pigeon-Maps](https://github.com/mariusandra/pigeon-maps)
+
 ## Author
 
 👤 **James Cockbain**

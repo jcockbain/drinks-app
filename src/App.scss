@@ -2,20 +2,16 @@ body {
   background-color: #E5CB90;
  }
 
-
-.App {
-  text-align: center;
-}
-
 .App-header {
   background-color: #DBB561;
+  text-align: center;
 }
 
 .header-image {
   width: 200px;
 }
 
-$primary: #DBB561;
-$secondary: #5DAB7C;
+// $primary: #DBB561;
+$primary: #5DAB7C;
 
 @import "~bootstrap/scss/bootstrap";
