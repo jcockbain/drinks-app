@@ -15,7 +15,7 @@ const EventGuestsTab = ({ eventGuests, creator }) => (
     </Card.Subtitle>
     <ListGroup>
       {eventGuests && eventGuests.map((guest) => (
-        <Profile avatarUrl={guest.avatarUrl} name={guest.name} />
+        <Profile key={guest.name} avatarUrl={guest.avatarUrl} name={guest.name} />
       ))}
     </ListGroup>
   </Card.Body>
@@ -23,6 +23,7 @@ const EventGuestsTab = ({ eventGuests, creator }) => (
 
 EventGuestsTab.defaultProps = {
   eventGuests: [],
+  creator: {},
 };
 
 EventGuestsTab.propTypes = {
@@ -33,7 +34,7 @@ EventGuestsTab.propTypes = {
   creator: PropTypes.shape({
     name: PropTypes.string,
     avatarUrl: PropTypes.string,
-  }).isRequired,
+  }),
 };
 
 export default EventGuestsTab;
