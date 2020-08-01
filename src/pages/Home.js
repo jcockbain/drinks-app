@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Row from 'react-bootstrap/Row';
-
 import Header from '../components/PageHeader';
 import EventSummaryContainer from '../containers/EventSummaryContainer';
 import EventSummaryCard from '../elements/EventSummaryCard';
@@ -11,9 +10,15 @@ function Home() {
   const [data, setData] = useState([]);
   const [searchString, setSearchString] = useState('');
 
-  const boxes = data.map((event) => (
-    <EventSummaryCard key={event.id} event={event} />
-  ));
+  const events = data
+    .sort((a, b) => {
+      const dateA = new Date(a.time);
+      const dateB = new Date(b.time);
+      return dateA - dateB;
+    })
+    .map((event) => (
+      <EventSummaryCard key={event.id} event={event} />
+    ));
 
   useEffect(() => {
     async function fetchData() {
@@ -37,7 +42,7 @@ function Home() {
           <EventSearch submitSearch={setSearchString} />
         </Row>
         <Row>
-          {boxes}
+          {events}
         </Row>
       </EventSummaryContainer>
     </div>
