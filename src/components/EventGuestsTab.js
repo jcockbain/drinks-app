@@ -6,9 +6,6 @@ import Profile from '../elements/UserProfile';
 
 const EventGuestsTab = ({ eventGuests, creator }) => (
   <Card.Body>
-    <Card.Title className="mb-3">
-      Event Guests
-    </Card.Title>
     <Card.Subtitle className="mb-3">
       Creator
     </Card.Subtitle>
@@ -16,7 +13,7 @@ const EventGuestsTab = ({ eventGuests, creator }) => (
     <Card.Subtitle className="mb-3">
       Guests
     </Card.Subtitle>
-    <ListGroup horizontal>
+    <ListGroup>
       {eventGuests && eventGuests.map((guest) => (
         <Profile avatarUrl={guest.avatarUrl} name={guest.name} />
       ))}

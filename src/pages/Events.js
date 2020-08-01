@@ -22,7 +22,7 @@ function Events() {
       setEventData(result.data);
     }
     fetchData();
-  }, []);
+  }, [eventId]);
 
   return (
 
