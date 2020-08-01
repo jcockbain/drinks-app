@@ -1,8 +1,8 @@
 # drinks-app 🍺
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](#)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/70e584bd-c65a-4647-8107-99b1d1f452df/deploy-status)](https://app.netlify.com/sites/ecstatic-shannon-b62777/deploys)
 
-> Web app for viewing future drinks events
+> A simple React.js web app for viewing drinks events
 
 ## Install
 
