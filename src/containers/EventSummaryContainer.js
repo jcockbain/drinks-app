@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Container from 'react-bootstrap/Container';
 
 const EventSummaryContainer = ({ children }) => (
-  <Container className="p-3 mx-auto">
+  <Container className="p-4 mx-auto">
     {children}
   </Container>
 );

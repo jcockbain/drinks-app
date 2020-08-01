@@ -9,18 +9,22 @@ const EventCommentsTab = ({ eventComments }) => (
   <Card.Body>
     <ListGroup>
       {eventComments && eventComments.map((comment) => (
-        <Comment eventComment={comment} />
+        <Comment key={comment.timestamp} eventComment={comment} />
       ))}
     </ListGroup>
   </Card.Body>
 );
 
+EventCommentsTab.defaultProps = {
+  eventComments: [],
+};
+
 EventCommentsTab.propTypes = {
   eventComments: PropTypes.arrayOf(PropTypes.shape({
     user: PropTypes.shape(Profile.propTypes),
-    timeStamp: PropTypes.string,
+    timestamp: PropTypes.string,
     message: PropTypes.string,
-  })).isRequired,
+  })),
 };
 
 export default EventCommentsTab;
