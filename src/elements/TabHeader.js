@@ -1,5 +1,5 @@
 import React from 'react';
-import Badge from 'react-bootstrap/badge';
+import Badge from 'react-bootstrap/Badge';
 import PropTypes from 'prop-types';
 
 const TabHeader = ({ title, value }) => (

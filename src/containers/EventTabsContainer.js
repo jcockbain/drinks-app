@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import Tabs from 'react-bootstrap/tabs';
-import Tab from 'react-bootstrap/tab';
-import { Card } from 'react-bootstrap';
+import Tabs from 'react-bootstrap/Tabs';
+import Tab from 'react-bootstrap/Tab';
+import Card from 'react-bootstrap/Card';
 import EventDetails from '../components/EventDetailsTab';
 import EventGuests from '../components/EventGuestsTab';
 import EventComments from '../components/EventCommentsTab';
