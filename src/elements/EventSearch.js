@@ -24,7 +24,7 @@ const EventSearch = ({ submitSearch }) => {
       </Form.Row>
       <Form.Row>
         <Col sm="auto">
-          <Form.Text id="drinksSearch" muted>
+          <Form.Text id="drinksSearch">
             Search for an event by its title, or the name of its location
           </Form.Text>
         </Col>

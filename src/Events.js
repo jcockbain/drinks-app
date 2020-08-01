@@ -5,9 +5,9 @@ import {
   useParams,
 } from 'react-router-dom';
 
-import Header from './components/Header';
+import Header from './components/PageHeader';
 import EventSummaryContainer from './containers/EventSummaryContainer';
-import EventCard from './elements/EventCard';
+import EventTabs from './containers/EventTabsContainer';
 
 function Events() {
   const [eventData, setEventData] = useState({});
@@ -16,7 +16,6 @@ function Events() {
   useEffect(() => {
     async function fetchData() {
       const apiUrl = `https://mock-api.drinks.test.siliconrhino.io/events/${eventId}`;
-
       const result = await axios(
         apiUrl,
       );
@@ -30,7 +29,7 @@ function Events() {
     <div className="App">
       <Header />
       <EventSummaryContainer>
-        <EventCard event={eventData} />
+        <EventTabs event={eventData} />
       </EventSummaryContainer>
     </div>
 

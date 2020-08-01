@@ -8,18 +8,18 @@ const provider = (x, y, z) => {
   return `https://${s}.tile.openstreetmap.org/${z}/${x}/${y}.png`;
 };
 
-const SimpleMap = ({ location }) => {
+const EventMap = ({ location }) => {
   const eventLocation = [location.latitude, location.longitude];
   return (
     <div className="m-3">
-      <Map center={eventLocation} zoom={12} width={600} height={400} provider={provider}>
+      <Map center={eventLocation} zoom={12} defaultWidth={600} height={400} provider={provider}>
         <Marker anchor={eventLocation} payload={1} />
       </Map>
     </div>
   );
 };
 
-SimpleMap.propTypes = {
+EventMap.propTypes = {
   location: PropTypes.shape({
     name: PropTypes.string,
     latitude: PropTypes.number,
@@ -27,4 +27,4 @@ SimpleMap.propTypes = {
   }).isRequired,
 };
 
-export default SimpleMap;
+export default EventMap;

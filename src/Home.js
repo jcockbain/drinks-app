@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Row from 'react-bootstrap/Row';
 
-import Header from './components/Header';
+import Header from './components/PageHeader';
 import EventSummaryContainer from './containers/EventSummaryContainer';
 import EventSummaryCard from './elements/EventSummaryCard';
 import EventSearch from './elements/EventSearch';
