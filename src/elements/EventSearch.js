@@ -15,15 +15,15 @@ const EventSearch = ({ submitSearch }) => {
   return (
     <Form onSubmit={handleSubmit}>
       <Form.Row>
-        <Col xs="auto">
+        <Col sm="auto">
           <Form.Control aria-describedby="drinksSearch" type="text" placeholder="Search Event..." onChange={(e) => setSearchTerm(e.target.value)} />
         </Col>
-        <Col xs="auto">
+        <Col sm="auto">
           <Button type="submit" className="my-sm-0 my-2">Search</Button>
         </Col>
       </Form.Row>
       <Form.Row>
-        <Col xs="auto">
+        <Col sm="auto">
           <Form.Text id="drinksSearch" muted>
             Search for an event by its title, or the name of its location
           </Form.Text>

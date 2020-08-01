@@ -3,19 +3,26 @@ import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import { format } from 'date-fns';
 import PropTypes from 'prop-types';
+import {
+  Link,
+} from 'react-router-dom';
 import drinksIcons from '../utils/drinksIcons';
 
 const EventSummaryCard = ({ event }) => (
   <Col md={3}>
     <Card className="m-3">
-      <Card.Img variant="top" src={`drinks-icons/${drinksIcons[event.type]}`} alt="drinks-icon" />
+      <Card.Img variant="top" src={`/drinks-icons/${drinksIcons[event.type]}`} alt="drinks-icon" />
       <Card.Body>
-        <Card.Title>{event.title}</Card.Title>
+        <Card.Title>
+          <Link to={`/events/${event.id}`}>
+            {event.title}
+          </Link>
+        </Card.Title>
         <Card.Subtitle className="text-muted">
-          {format(new Date(event.time), 'MM/dd/yyyy')}
+          {event.time && format(new Date(event.time), 'MM/dd/yyyy')}
         </Card.Subtitle>
         <Card.Text>
-          {event.location.name}
+          {event.location && event.location.name}
         </Card.Text>
       </Card.Body>
     </Card>

@@ -28,7 +28,9 @@ npm run test
 
 - React-Bootstrap + SCSS for styling. [React-Bootstrap](https://react-bootstrap.github.io/) + [SCSS](https://sass-lang.com/)
 
-- Uses the [drinks](https://www.siliconrhino.io/drinks/) API for data.
+- Uses the silicon rhino drinks API for data. [drinks API](https://www.siliconrhino.io/drinks/)
+
+- React-Router for routing. [React-Router](https://reactrouter.com/)
 
 ## Author
 
