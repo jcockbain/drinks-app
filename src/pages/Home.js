@@ -35,7 +35,7 @@ function Home() {
   }, [searchString]);
 
   return (
-    <div className="App">
+    <div>
       <Header />
       <EventSummaryContainer>
         <Row>

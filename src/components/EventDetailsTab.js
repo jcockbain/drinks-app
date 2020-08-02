@@ -15,7 +15,7 @@ const EventDetailsTab = ({ event }) => {
         {event.time && `${format(eventDate, 'dd/MM/yyyy - kk:mm:ss')}`}
       </Card.Subtitle>
       <Card.Text>
-        Location:
+        Venue:
         {' '}
         {event.location && event.location.name}
       </Card.Text>
