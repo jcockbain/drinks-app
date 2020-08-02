@@ -32,7 +32,7 @@ The latest version of the app is deployed, using Netlify, to https://ecstatic-sh
 
 - React-Bootstrap + SCSS for styling. [React-Bootstrap](https://react-bootstrap.github.io/) + [SCSS](https://sass-lang.com/)
 
-- Uses the silicon rhino drinks API for data. [drinks API](https://www.siliconrhino.io/drinks/)
+- Uses the silicon rhino drinks API for data. [Drinks API](https://www.siliconrhino.io/drinks/)
 
 - React-Router for routing. [React-Router](https://reactrouter.com/)
 
