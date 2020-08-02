@@ -4,7 +4,7 @@ import Media from 'react-bootstrap/Media';
 import PropTypes from 'prop-types';
 
 const Comment = ({ eventComment }) => (
-  <Media className="m-2 border rounded" as="li">
+  <Media className="m-2 p-2 border rounded" as="li">
     <img
       width={64}
       height={64}

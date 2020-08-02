@@ -13,7 +13,7 @@ const EventSearch = ({ submitSearch }) => {
   };
 
   return (
-    <Form className="px-3" onSubmit={handleSubmit}>
+    <Form onSubmit={handleSubmit}>
       <Form.Row>
         <Col sm="auto">
           <Form.Control aria-describedby="drinksSearch" type="text" placeholder="Search Event..." onChange={(e) => setSearchTerm(e.target.value)} />

@@ -11,7 +11,7 @@ const EventGuestsTab = ({ eventGuests, creator }) => (
     </Card.Title>
     <Card.Subtitle className="my-3">
       Creator
-      <img className="pl-2" width={32} height={32} src="/drinks-icons/crown-icon-yellow.png" alt="crown" />
+      <img className="pl-2" width={32} src="/drinks-icons/crown-icon-yellow.png" alt="crown" />
     </Card.Subtitle>
     {creator && <Profile avatarUrl={creator.avatarUrl} name={creator.name} />}
     <Card.Subtitle className="my-3">
