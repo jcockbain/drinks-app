@@ -7,6 +7,7 @@ import EventSummaryContainer from '../containers/EventSummaryContainer';
 import EventSummaryCard from '../elements/EventSummaryCard';
 import EventSearch from '../elements/EventSearch';
 import EventPagination from '../components/EventPagination';
+import { eventsOnHomePage } from '../utils/constants';
 
 function Home() {
   const [events, setEvents] = useState([]);
@@ -21,7 +22,9 @@ function Home() {
       const result = await axios(
         apiUrl,
       );
-      setNumberOfEvents(result.data.length);
+      if (result.data) {
+        setNumberOfEvents(result.data.length);
+      }
     }
     fetchData();
   }, [searchString]);
@@ -30,8 +33,8 @@ function Home() {
   useEffect(() => {
     async function fetchData() {
       const apiUrl = searchString
-        ? `https://mock-api.drinks.test.siliconrhino.io/events?search=${searchString}&pageSize=3&pageNumber=${pageNumber}`
-        : `https://mock-api.drinks.test.siliconrhino.io/events?pageSize=3&page=${pageNumber}`;
+        ? `https://mock-api.drinks.test.siliconrhino.io/events?search=${searchString}&pageSize=${eventsOnHomePage}&pageNumber=${pageNumber}`
+        : `https://mock-api.drinks.test.siliconrhino.io/events?pageSize=${eventsOnHomePage}&page=${pageNumber}`;
 
       const result = await axios(
         apiUrl,
@@ -64,6 +67,7 @@ function Home() {
               numberOfEvents={numberOfEvents}
               pageNumber={pageNumber}
               setPageNumber={setPageNumber}
+              eventsPerPage={eventsOnHomePage}
             />
           </Col>
         </Row>
