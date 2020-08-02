@@ -10,7 +10,7 @@ import drinksIcons from '../utils/drinksIcons';
 
 const EventSummaryCard = ({ event }) => (
   <Col md={4}>
-    <Card className="m-2">
+    <Card className="m-2-md m-3">
       <Card.Img variant="top" src={`/drinks-icons/${drinksIcons[event.type]}`} alt="drinks-icon" />
       <Card.Body>
         <Card.Title>

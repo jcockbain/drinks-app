@@ -9,6 +9,7 @@ const EventCommentsTab = ({ eventComments }) => (
   <Card.Body>
     <Card.Title>
       Comments
+      <img className="pl-2" width={32} height={32} src="/drinks-icons/comment-yellow.png" alt="comment" />
     </Card.Title>
     <ListGroup>
       {eventComments && eventComments.map((comment) => (

@@ -9,11 +9,12 @@ const EventGuestsTab = ({ eventGuests, creator }) => (
     <Card.Title>
       Events Guests
     </Card.Title>
-    <Card.Subtitle>
+    <Card.Subtitle className="my-3">
       Creator
+      <img className="pl-2" width={32} height={32} src="/drinks-icons/crown-icon-yellow.png" alt="crown" />
     </Card.Subtitle>
     {creator && <Profile avatarUrl={creator.avatarUrl} name={creator.name} />}
-    <Card.Subtitle>
+    <Card.Subtitle className="my-3">
       Guests
     </Card.Subtitle>
     <ListGroup>
