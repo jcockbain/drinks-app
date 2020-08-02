@@ -22,6 +22,10 @@ npm start
 npm run test
 ```
 
+## Deployment
+
+The latest version of the app is deployed, using Netlify, to https://ecstatic-shannon-b62777.netlify.app/.
+
 ## Technologies
 
 - Based off Create-React-App. [Create React App](https://create-react-app.dev/)
@@ -33,6 +37,8 @@ npm run test
 - React-Router for routing. [React-Router](https://reactrouter.com/)
 
 - Pigeon Maps for map components. [Pigeon-Maps](https://github.com/mariusandra/pigeon-maps)
+
+- Netlify, for deployment. [Netlify](https://www.netlify.com/)
 
 ## Author
 
