@@ -4,7 +4,7 @@ import Media from 'react-bootstrap/Media';
 import PropTypes from 'prop-types';
 
 const Comment = ({ eventComment }) => (
-  <Media as="li">
+  <Media className="m-2 border rounded" as="li">
     <img
       width={64}
       height={64}
@@ -17,9 +17,9 @@ const Comment = ({ eventComment }) => (
       <p>
         {eventComment.message}
       </p>
-      <p className="text-muted">
+      <small className="text-muted">
         {format(new Date(eventComment.timestamp), 'dd/MM/yyyy - kk:mm:ss')}
-      </p>
+      </small>
     </Media.Body>
   </Media>
 );

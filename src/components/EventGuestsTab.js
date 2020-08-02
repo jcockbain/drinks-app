@@ -6,11 +6,14 @@ import Profile from '../elements/UserProfile';
 
 const EventGuestsTab = ({ eventGuests, creator }) => (
   <Card.Body>
-    <Card.Subtitle className="mb-3">
+    <Card.Title>
+      Events Guests
+    </Card.Title>
+    <Card.Subtitle>
       Creator
     </Card.Subtitle>
     {creator && <Profile avatarUrl={creator.avatarUrl} name={creator.name} />}
-    <Card.Subtitle className="mb-3">
+    <Card.Subtitle>
       Guests
     </Card.Subtitle>
     <ListGroup>

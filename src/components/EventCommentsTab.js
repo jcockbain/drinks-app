@@ -7,6 +7,9 @@ import Comment from '../elements/Comment';
 
 const EventCommentsTab = ({ eventComments }) => (
   <Card.Body>
+    <Card.Title>
+      Comments
+    </Card.Title>
     <ListGroup>
       {eventComments && eventComments.map((comment) => (
         <Comment key={comment.timestamp} eventComment={comment} />
