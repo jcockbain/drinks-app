@@ -54,13 +54,18 @@ function Home() {
       <EventSummaryCard key={event.id} event={event} />
     ));
 
+  const updateSearchString = (string) => {
+    setSearchString(string);
+    setPageNumber(1);
+  };
+
   return (
     <div>
       <Header />
       <EventSummaryContainer>
         <Row className="px-3">
           <Col md={4}>
-            <EventSearch submitSearch={setSearchString} />
+            <EventSearch submitSearch={updateSearchString} />
           </Col>
           <Col className="mt-md-0 mt-2" md={{ span: 4, offset: 4 }}>
             <EventPagination
